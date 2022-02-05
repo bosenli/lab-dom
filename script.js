@@ -21,13 +21,29 @@ window.onload =  function(event) {
 
   // Part 1
   document.querySelector("#main-title").textContent = "Welcome to my homepage";
+  // document.querySelector("#main-title").textContent = "I am the Captain now";
   //document.title = "playground";
   // Part 2
   document.body.style.backgroundColor = "red";
 
   // Part 3
   document.querySelector('#favorite-things li:last-child').remove();
+  //   const listItems = document.querySelector("#favorite-things")
+  //   listItems.removeChild(listItems.childNodes[11]);
   // Part 4
+  // let adventures = document.querySelector(".special-title")
+  // for (let i = 0; i < adventures.length; i++) {
+  //   adventures[i].style.fontSize = "1rem";  
+  // }
+  //   const biggerFontSize = () => {
+  //     let special = document.querySelectorAll('.special-title');
+
+  //     for (item of special) {
+  //       item.style.fontSize = "2rem";
+  //     }
+  //   }
+
+  //   biggerFontSize();
   let adventures = document.querySelector('.special-title')
   for (let i = 0; i< adventures.length; i++){
     adventures[i].style.fontSize= "1px";
@@ -35,10 +51,23 @@ window.onload =  function(event) {
   // Part 5
   let race = document.querySelector("#past-races")
   race.removeChild(race.childNodes[7])      //child node is 2*n - 1
+  
+  // let race = document.querySelector("#past-races")
+  //  race.removeChild(race.childNodes[7])
+  //   const noChicago = () => {
+  //     let pastRaces = document.querySelector("#past-races").querySelectorAll("li")
+  //     for (item of pastRaces) {
+  //       if (item.textContent === 'Chicago') {
+  //         item.remove();
+  //       }
+  //     }
+  //   }
+  // noChicago()
   // Part 6
   let node = document.createElement("li");
   node.innerText = "Detroit"
   document.querySelector("#past-races").appendChild(node)
+
   // Part 7
   // Create a new .blog-post corresponding to the new city added in Part 6. You will have to create a new <div> with class of .blog-post, a new <h1> with text, and a new <p> with some text. Make the new element consistent with the other posts. Think about what order you want to create the elements, and what order you want to append them in.
   const blogPost = document.createElement("div");
@@ -47,6 +76,7 @@ window.onload =  function(event) {
   document.querySelector(".blog-post").createElement('p').innerText = "added para"
   //appendChild
   document.querySelector(".blog-post").appendChild(blogPost)
+  
 
 //   let newBlog = document.createElement("div")  //element is to createElement
 //   newBlog.classList.add("blog-post");      //add to inside of div element as class <div class=blog-post>
